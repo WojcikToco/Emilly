@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envelope {
+    cursor: pointer;
+}
+
+.carta-fechada {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+.landing {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: #121212;
+    color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 320px;
+    text-align: center;
+}
+
+.player {
+    margin-top: 20px;
+    background: #181818;
+    border-radius: 16px;
+    padding: 15px;
+}
+
+.cover {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.info {
+    margin-top: 10px;
+}
+
+.info span {
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+.controls {
+    margin-top: 15px;
+}
+
+.controls button {
+    background: #1db954;
+    border: none;
+    color: #000;
+    font-size: 20px;
+    padding: 12px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
