@@ -15,26 +15,93 @@
 </div>
 
 <div class="landing" id="landing">
-    <div class="card">
-        <h1>Para você, com amor ❤️</h1>
-        <p>Essa música sempre vai me lembrar de nós.</p>
 
-        <div class="player">
-            <img src="foto.jpeg" alt="Imagem personalizada" class="cover">
+    <div class="hearts"></div>
 
-            <div class="info">
-                <strong>Nossa Música</strong>
-                <span>Feita para você</span>
+    <div class="layout-container fade-in">
+
+        <div class="photos-grid">
+            <div class="photo-box polaroid" onclick="openLightbox(this)">
+                <img src="foto1.jpeg">
+                <span>Nosso começo</span>
             </div>
 
-            <div class="controls">
-                <button id="playPause">▶️</button>
+            <div class="photo-box polaroid" onclick="openLightbox(this)">
+                <img src="foto2.jpeg">
+                <span>Primeiro sorriso</span>
             </div>
-
-            <audio id="audio">
-                <source src="audio.mpeg" type="audio/mpeg">
-            </audio>
         </div>
+
+        <div class="card heartbeat">
+            <h1>Para você, com amor ❤️</h1>
+            <p>Essa música sempre vai me lembrar de nós.</p>
+
+            <div class="player">
+                <img src="foto.jpeg" class="cover">
+
+                <div class="info">
+                    <strong>Nossa Música</strong>
+                    <span>Feita para você</span>
+                </div>
+
+                <div class="controls">
+                    <button id="playPause">▶️</button>
+                </div>
+
+                <audio id="audio">
+                    <source src="audio.mpeg" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="love-text">
+                <p>
+                    “Amar você é encontrar poesia nos dias comuns.<br>
+                    É ouvir uma música e lembrar do seu sorriso.<br>
+                    É saber que, mesmo no silêncio, meu coração fala seu nome.”
+                </p>
+
+                <p>
+                    “Se eu tivesse que escolher um lugar seguro,<br>
+                    escolheria você.<br>
+                    Porque é no seu abraço que o mundo desacelera.”
+                </p>
+            </div>
+        </div>
+
+        <div class="photos-grid">
+            <div class="photo-box polaroid" onclick="openLightbox(this)">
+                <img src="foto3.jpeg">
+                <span>Momentos simples</span>
+            </div>
+
+            <div class="photo-box polaroid" onclick="openLightbox(this)">
+                <img src="foto4.jpeg">
+                <span>Para sempre nós</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LINHA DO TEMPO -->
+    <div class="timeline fade-in">
+        <h2>Nossa História ✨</h2>
+        <ul>
+            <li><strong>💌 Primeiro encontro</strong> – Onde tudo começou</li>
+            <li><strong>🎶 Nossa música</strong> – Que virou memória</li>
+            <li><strong>📸 Momentos</strong> – Que viraram saudade boa</li>
+            <li><strong>❤️ Hoje</strong> – Escolher você todos os dias</li>
+        </ul>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img">
+    </div>
+
+</div>
+
+
+
     </div>
 </div>
 
