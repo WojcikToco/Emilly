@@ -18,3 +18,11 @@ playPause.addEventListener("click", () => {
         playPause.textContent = "▶️";
     }
 });
+function openLightbox(el) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = el.querySelector("img").src;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
