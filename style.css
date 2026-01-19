@@ -83,3 +83,140 @@ body {
     border-radius: 50%;
     cursor: pointer;
 }
+.layout-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 360px 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.photo-box {
+    width: 100%;
+    height: 200px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.love-text {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #f5f5f5;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.love-text p {
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+    .layout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .photos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none;
+    }
+
+    .photo-box {
+        height: 150px;
+    }
+}
+
+
+/* ANIMAÇÃO */
+.fade-in {
+    animation: fade 1.5s ease;
+}
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* POLAROID */
+.polaroid {
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+.polaroid span {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #333;
+}
+
+/* BATIMENTO */
+.heartbeat {
+    animation: beat 2s infinite;
+}
+@keyframes beat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.03); }
+    28% { transform: scale(1); }
+}
+
+/* CORAÇÕES */
+.hearts::before {
+    content: "❤️ 💕 💖 💗";
+    position: fixed;
+    font-size: 30px;
+    animation: float 12s infinite linear;
+    opacity: .4;
+}
+@keyframes float {
+    from { transform: translateY(100vh); }
+    to { transform: translateY(-100vh); }
+}
+
+/* LIGHTBOX */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+}
+
+/* TIMELINE */
+.timeline {
+    margin: 60px auto;
+    max-width: 500px;
+    text-align: center;
+    color: #fff;
+}
+.timeline ul {
+    list-style: none;
+}
+.timeline li {
+    margin: 15px 0;
+    font-style: italic;
+}
